@@ -1,0 +1,22 @@
+#color-chooser {
+	display: inline-block;
+	border: 1px solid black;
+}
+
+#darkness-factor, #shade-chooser {
+	display: inline-block;
+	border: 1px solid black;
+}
+
+#chosen-color {
+	background: #000000;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	border: 1px solid black;
+}
+
+.color-label {
+    display: inline-block;
+    margin-right: 10px;
+}
