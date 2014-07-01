@@ -2,13 +2,29 @@
 <html lang="en-US">
 <head>
 	<title>HTML5 Canvas Color Chooser</title>
-	<link href="css/colorchooser.css" rel="stylesheet" type="text/css" />
-	<script src="js/colorchooser.js" type="text/javascript"></script>
+	<link href="css/jspalette.css" rel="stylesheet" type="text/css" />
+	<script src="js/jspalette.js" type="text/javascript"></script>
+	<script src="js/example.js" type="text/javascript"></script>
 </head>
 <body>
 	<!--<canvas id="darkness-factor" width="150px" height="20px"></canvas>-->
-	<canvas id="color-chooser" width="130px" height="130px"></canvas>
-	<canvas id="shade-chooser" width="12px" height="130px"></canvas>
-	<div class="color-outcome"><div id="chosen-color"></div><label id="picked-color">#000000</label></div>
+	<div id="jspalette">
+		<div id="color-container">
+			<div class="color-outcome">
+				<div id="chosen-color"></div>
+				<label id="picked-color">#15EAE7</label>
+			</div>
+			<div id="chooser-background">
+				<canvas id="color-chooser" width="130px" height="130px"></canvas>
+			</div>
+			<div id="shade-background">
+				<canvas id="shade-chooser" width="12px" height="130px"></canvas>
+			</div>
+		</div>
+		<div id="palette-controls">
+			<button id="jspalette-close" class="jspalette-control" style="float: left;">Close</button>
+			<button id="jspalette-choose" class="jspalette-control" style="float: right;" onclick="getColor();">Choose</button>
+		</div>
+	</div>
 </body>
 </html>

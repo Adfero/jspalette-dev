@@ -1,0 +1,91 @@
+/*
+ * Main/Container Styles
+ */
+#jspalette {
+	width: 190px;
+	padding: 10px 15px;
+	border-radius: 3px;
+	border: 1px solid #666;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+}
+
+#color-container {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#palette-controls {
+	width: 160px;
+	height: 30px;
+	margin: 20px auto 5px auto;
+}
+
+
+/*
+ * Color Chooser Styles
+ */
+#chooser-background {
+	display: inline-block;
+	height: 132px;
+	width: 132px;
+}
+
+#color-chooser {
+	display: inline-block;
+	border: 1px solid black;
+	background: #000000;
+}
+
+#shade-background {
+	display: inline-block;
+	height: 132px;
+	width: 14px;
+}
+
+#shade-chooser {
+	display: inline-block;
+	margin-left: 10px;
+	border: 1px solid black;
+}
+
+#chosen-color {
+	background: #15EAE7;
+	margin: 5px 10px 0 0;
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	border: 1px solid black;
+}
+
+#picked-color {
+    display: inline-block;
+    top: -8px;
+    position: relative;
+}
+
+
+/*
+ * Button Styles
+ */
+.jspalette-control {
+	cursor: pointer;
+	height: 30px;
+	padding: 0 10px;
+	background: lightblue;
+	color: midnightblue;
+	border: 1px solid midnightblue;
+	border-radius: 3px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.jspalette-control:hover {
+	background: midnightblue;
+	color: lightblue;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
