@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>HTML5 Canvas Color Chooser</title>
+	<title>JSPalette - A color picker written primarily in JavaScript using the HTML5 Canvas API</title>
 	<link href="css/jspalette.css" rel="stylesheet" type="text/css" />
 	<script src="js/jspalette.js" type="text/javascript"></script>
 	<script src="js/example.js" type="text/javascript"></script>
@@ -10,14 +10,16 @@
 	<!--<canvas id="darkness-factor" width="150px" height="20px"></canvas>-->
 	<div id="jspalette">
 		<div id="color-container">
-			<div class="color-outcome">
+			<div id="color-outcome">
 				<div id="chosen-color"></div>
-				<label id="picked-color">#15EAE7</label>
+				<input type="text" id="picked-color" value="#15EAE7">
 			</div>
 			<div id="chooser-background">
+				<div id="chooser-icon"></div>
 				<canvas id="color-chooser" width="130px" height="130px"></canvas>
 			</div>
 			<div id="shade-background">
+				<div id="shader-slider"></div>
 				<canvas id="shade-chooser" width="12px" height="130px"></canvas>
 			</div>
 		</div>

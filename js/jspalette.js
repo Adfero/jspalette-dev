@@ -73,6 +73,15 @@ function addListeners() {
 	shadeChooserCanvas.addEventListener("mouseout", function(event) {
 		ismouseDown = false;
 	}, false);
+	
+	document.getElementById("picked-color").addEventListener("change", function(event) {
+		var input = document.getElementById("picked-color").value;
+		
+		shadeColor = (input.substr(0, 1) == '#') ? input : '#' + input;
+		document.getElementById("picked-color").value = shadeColor;
+		document.getElementById("chosen-color").style.background = shadeColor;
+		drawShadeChooser();
+	}, false);
 }
 
 function drawColorChooser() {
@@ -127,10 +136,10 @@ function changeColor(event) {
 	
 	mouseX = event.pageX - canvasX;
 	mouseY = event.pageY - canvasY;
-		
+	
 	var data = colorChooserContext.getImageData(mouseX, mouseY, 1, 1).data;
 	shadeColor = rgbToHex(data[0], data[1], data[2]);
-	document.getElementById("picked-color").innerHTML = shadeColor;
+	document.getElementById("picked-color").value = shadeColor;
 	document.getElementById("chosen-color").style.background = shadeColor;
 	drawShadeChooser();
 }
@@ -144,7 +153,7 @@ function chooseShade(event) {
 		
 	var data = shadeChooserContext.getImageData(mouseX, mouseY, 1, 1).data;
 	var color = rgbToHex(data[0], data[1], data[2]);
-	document.getElementById("picked-color").innerHTML = color;
+	document.getElementById("picked-color").value = color;
 	document.getElementById("chosen-color").style.background = color;
 }
 

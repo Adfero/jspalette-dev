@@ -33,19 +33,24 @@
 #color-chooser {
 	display: inline-block;
 	border: 1px solid black;
-	background: #000000;
+	cursor: crosshair;
 }
 
 #shade-background {
 	display: inline-block;
 	height: 132px;
 	width: 14px;
+	margin-left: 5px;
 }
 
 #shade-chooser {
 	display: inline-block;
-	margin-left: 10px;
 	border: 1px solid black;
+	cursor:
+}
+
+#color-outcome {
+	margin-bottom: 10px;
 }
 
 #chosen-color {
@@ -61,6 +66,8 @@
     display: inline-block;
     top: -8px;
     position: relative;
+	width: 85px;
+	padding-left: 10px;
 }
 
 
