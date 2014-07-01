@@ -81,8 +81,8 @@ function drawColorChooser() {
 	drawShadeChooser();
 }
 
-function drawMainChooser() {	
-	var backgroundGradient = colorChooserContext.createLinearGradient(0, 150, 140, 150);
+function drawMainChooser() {
+	var backgroundGradient = colorChooserContext.createLinearGradient(0, 130, 120, 130);
     backgroundGradient.addColorStop(0.0, '#ED1212');
     backgroundGradient.addColorStop(0.2, '#E6EC13');
     backgroundGradient.addColorStop(0.4, '#17EC13');
@@ -90,31 +90,34 @@ function drawMainChooser() {
     backgroundGradient.addColorStop(0.8, '#1F16E9');
     backgroundGradient.addColorStop(1.0, '#D817E8');
 	
-	var overlayGradient = colorChooserContext.createLinearGradient(0, 0, 0, 180);
-	overlayGradient.addColorStop(0.45, 'rgba(0, 0, 0, 0.0)');
+	var overlayGradient = colorChooserContext.createLinearGradient(0, 0, 0, 155);
+	overlayGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.0)');
 	overlayGradient.addColorStop(0.85, 'grey');
 	
 	colorChooserContext.fillStyle = backgroundGradient;
-	colorChooserContext.fillRect(0, 0, 150, 150);
+	colorChooserContext.fillRect(0, 0, 130, 130);
+	
+	colorChooserContext.fillStyle = overlayGradient;
+	colorChooserContext.fillRect(0, 0, 130, 140)
 }
 
 function drawDarknessChooser() {
-	var backgroundGradient = darknessFactorContext.createLinearGradient(0, 0, 150, 20);
+	var backgroundGradient = darknessFactorContext.createLinearGradient(0, 0, 100, 20);
 	backgroundGradient.addColorStop(0.0, '#000');
 	backgroundGradient.addColorStop(0.9, '#fff');
 	
 	darknessFactorContext.fillStyle = backgroundGradient;
-	darknessFactorContext.fillRect(0, 0, 150, 20);
+	darknessFactorContext.fillRect(0, 0, 130, 12);
 }
 
 function drawShadeChooser() {
-	var backgroundGradient = shadeChooserContext.createLinearGradient(0, 0, 20, 150);
+	var backgroundGradient = shadeChooserContext.createLinearGradient(0, 0, 12, 130);
 	backgroundGradient.addColorStop(0.1, '#000');
 	backgroundGradient.addColorStop(0.5, shadeColor);
 	backgroundGradient.addColorStop(0.9, '#fff');
 	
 	shadeChooserContext.fillStyle = backgroundGradient;
-	shadeChooserContext.fillRect(0, 0, 20, 150);
+	shadeChooserContext.fillRect(0, 0, 12, 130);
 }
 
 function changeColor(event) {
