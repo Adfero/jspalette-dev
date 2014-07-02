@@ -1,13 +1,10 @@
 /*
- * colorchooser.js
+ * jspalette.js
  * Created: 6/30/2014 2:50pm
  * Author: Daniel Vidmar
  */
 var colorChooserCanvas;
 var colorChooserContext;
-
-var darknessFactorCanvas;
-var darknessFactorContext;
 
 var shadeChooserCanvas;
 var shadeChooserContext;
@@ -27,8 +24,6 @@ window.onload = function() {
 function initCanvas() {
 	colorChooserCanvas = document.getElementById("color-chooser");
 	colorChooserContext = colorChooserCanvas.getContext("2d");
-	/*darknessFactorCanvas = document.getElementById("darkness-factor");
-	darknessFactorContext = darknessFactorCanvas.getContext("2d");*/
 	shadeChooserCanvas = document.getElementById("shade-chooser");
 	shadeChooserContext = shadeChooserCanvas.getContext("2d");
 	
@@ -86,7 +81,6 @@ function addListeners() {
 
 function drawColorChooser() {
 	drawMainChooser();
-	//drawDarknessChooser();
 	drawShadeChooser();
 }
 
@@ -109,15 +103,6 @@ function drawMainChooser() {
 	
 	colorChooserContext.fillStyle = overlayGradient;
 	colorChooserContext.fillRect(0, 0, 130, 140)
-}
-
-function drawDarknessChooser() {
-	var backgroundGradient = darknessFactorContext.createLinearGradient(0, 0, 100, 20);
-	backgroundGradient.addColorStop(0.0, '#000');
-	backgroundGradient.addColorStop(0.9, '#fff');
-	
-	darknessFactorContext.fillStyle = backgroundGradient;
-	darknessFactorContext.fillRect(0, 0, 130, 12);
 }
 
 function drawShadeChooser() {
