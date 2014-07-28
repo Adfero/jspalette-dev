@@ -13,10 +13,21 @@ var shadeColor = "#15EAE7";
 
 var ismouseDown = false;
 
+var paletteHTML = '<div id="color-container"><div id="color-outcome"><div id="chosen-color"></div><input type="text" id="picked-color" value="#15EAE7"></div><div id="chooser-background"><div id="chooser-icon"></div><canvas id="color-chooser" width="130" height="130"></canvas></div><div id="shade-background"><div id="shader-slider"></div><canvas id="shade-chooser" width="12" height="130"></canvas></div></div><div id="palette-controls"><button id="jspalette-close" class="jspalette-control" style="float: left;">Close</button><button id="jspalette-choose" class="jspalette-control" style="float: right;">Choose</button></div>';
+
 var mouseX = 0;
 var mouseY = 0;
 
 window.onload = function() {
+	initJSPalette();
+}
+
+function initJSPalette() {
+	var paletteDiv = document.getElementById("jspalette");
+	if(paletteDiv.title.trim != "") {
+		paletteDiv.innerHTML = paletteHTML;
+		paletteDiv.title = "";
+	}
 	initCanvas();
 	drawColorChooser();
 }

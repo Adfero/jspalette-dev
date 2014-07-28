@@ -2,31 +2,12 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-	<title>JSPalette - A color picker written primarily in JavaScript using the HTML5 Canvas API</title>
+	<title>JSPalette - A color picker written in JavaScript using the HTML5 Canvas API</title>
 	<link href="css/jspalette.min.css" rel="stylesheet" type="text/css" />
 	<script src="js/jspalette.min.js" type="text/javascript"></script>
 	<script src="js/example.js" type="text/javascript"></script>
 </head>
 <body>
-	<div id="jspalette">
-		<div id="color-container">
-			<div id="color-outcome">
-				<div id="chosen-color"></div>
-				<input type="text" id="picked-color" value="#15EAE7">
-			</div>
-			<div id="chooser-background">
-				<div id="chooser-icon"></div>
-				<canvas id="color-chooser" width="130" height="130"></canvas>
-			</div>
-			<div id="shade-background">
-				<div id="shader-slider"></div>
-				<canvas id="shade-chooser" width="12" height="130"></canvas>
-			</div>
-		</div>
-		<div id="palette-controls">
-			<button id="jspalette-close" class="jspalette-control" style="float: left;">Close</button>
-			<button id="jspalette-choose" class="jspalette-control" style="float: right;" onclick="getColor();">Choose</button>
-		</div>
-	</div>
+	<div id="jspalette" title="jspalette"></div>
 </body>
 </html>
