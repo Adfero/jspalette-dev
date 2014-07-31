@@ -23,11 +23,7 @@ window.onload = function() {
 }
 
 function initJSPalette() {
-	var paletteDiv = document.getElementById("jspalette");
-	if(paletteDiv.title.trim != "") {
-		paletteDiv.innerHTML = paletteHTML;
-		paletteDiv.title = "";
-	}
+	document.getElementById("jspalette").innerHTML = paletteHTML;
 	initCanvas();
 	drawColorChooser();
 }
@@ -127,8 +123,13 @@ function drawShadeChooser() {
 }
 
 function changeColor(event) {
-	var canvasX = colorChooserCanvas.offsetLeft;
-	var canvasY = colorChooserCanvas.offsetTop;
+	var viewportOffset = colorChooserCanvas.getBoundingClientRect();
+	var top = viewportOffset.top;
+	var left = viewportOffset.left;
+	var scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+	var canvasX = scrollLeft + left;
+	var canvasY = scrollTop + top;
 	
 	mouseX = event.pageX - canvasX;
 	mouseY = event.pageY - canvasY;
@@ -141,8 +142,13 @@ function changeColor(event) {
 }
 
 function chooseShade(event) {
-	var canvasX = shadeChooserCanvas.offsetLeft;
-	var canvasY = shadeChooserCanvas.offsetTop;
+	var viewportOffset = shadeChooserCanvas.getBoundingClientRect();
+	var top = viewportOffset.top;
+	var left = viewportOffset.left;
+	var scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+	var canvasX = scrollLeft + left;
+	var canvasY = scrollTop + top;
 	
 	mouseX = event.pageX - canvasX;
 	mouseY = event.pageY - canvasY;
