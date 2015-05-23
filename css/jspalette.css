@@ -2,8 +2,9 @@
  * Main/Container Styles
  */
 #jspalette {
-	width: 190px;
-	padding: 10px 15px;
+	position: absolute;
+	width: auto;
+	padding: 15px;
 	border-radius: 3px;
 	border: 1px solid #666;
     background: white;
@@ -11,12 +12,12 @@
 }
 
 #color-container {
-	width: 160px;
+	width: auto;
 	margin: 0 auto;
 }
 
 #palette-controls {
-	width: 160px;
+	width: 151px;
 	height: 30px;
 	margin: 20px auto 5px auto;
 }
@@ -25,32 +26,39 @@
 /*
  * Color Chooser Styles
  */
+#chooser-icon {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: default;
+}
+
 #chooser-background {
 	display: inline-block;
-	height: 132px;
-	width: 132px;
 }
 
 #color-chooser {
 	display: inline-block;
 	border: 1px solid black;
-	cursor: crosshair;
+	cursor: default;
 }
 
 #shade-background {
 	display: inline-block;
-	height: 132px;
-	width: 14px;
 	margin-left: 5px;
 }
 
 #shade-chooser {
 	display: inline-block;
 	border: 1px solid black;
+	cursor: default;
 }
 
 #color-outcome {
-	margin-bottom: 10px;
+	width: 151px;
+	margin: 5px auto;	
 }
 
 #chosen-color {
@@ -64,10 +72,11 @@
 
 #picked-color {
     display: inline-block;
-    top: -8px;
+    top: -9px;
     position: relative;
-	width: 85px;
-	padding-left: 10px;
+	width: 105px;
+	height: 21px;
+	padding-left: 5px;
 }
 
 
